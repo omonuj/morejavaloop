@@ -1,37 +1,55 @@
 public class TrianglePrintingProgram {
-	public static void main(String [] args){
+	public static void main(String [] args) {
 
-		for (int a = 1; a <= 5; a++) {
-			for (int y = a; y <= 5; y++) {
-			System.out.print("*");
-		}
-		System.out.println("");
-		}	
+		int size = 10;
+		char[][] pattern = new char[size][4 * (size + 2)];
 
-		
-		for (int b = 1; b <= 5; b++) {
-			for (int y = b; y <= 5; y++) {
-			System.out.print("*");
-		}
-		System.out.println("");
-		}	
-		
-		
-		for (int c = 1; c <= 5; c++) {
-			for (int y = c; y <= 5; y++) {
-			System.out.print("*");
-		}
-		System.out.println("");
+		 for (int a = 0; a < size; a++) {
+           		 for (int b = 0; b < 4 * (size + 2); b++) {
+             		 	 pattern[a][b] = ' ';
+          		}
+        	}
+
+	
+		// pattern (a)
+		for (int a = 1; a <= size; a++) {
+			for (int b = 0; b <= size; b++) {
+			pattern[a][b] = '*';
+			}		
 		}	
 
-		
-		for (int d = 1; d <= 5; d++) {
-			for (int y = d; y <= 5; y++) {
-			System.out.print("*");
-		}
-		System.out.println("");
+		// pattern (b)
+		for (int a = 0; a < size; a++) {
+			for (int b = 0; b < size - a; b++) {
+			 pattern[a][b] = '*';
+
+			}
 		}	
 		
+		// pattern (c)
+		for (int a = 0; a < size; a++) {
+			for (int b = 0; b < size; b++) {
+			pattern[a][b] = '*';
+
+			}
+		}	
+
+		// pattern (d)
+		for (int a = 0; a < size; a++) {
+			for (int b = 0; b <= a; b++) {
+			 pattern[a][b + 3 * (size +2) + size - 1 - 1] = '*';	
+			
+			}
+		
+		}	
+		
+		 // Print patterns
+        	for (int i = 0; i < size; i++) {
+            		for (int j = 0; j < 4 * (size + 2); j++) {
+                	System.out.print(pattern[i][j]);
+            }
+            System.out.println();
+        }
 
 	}
 }
