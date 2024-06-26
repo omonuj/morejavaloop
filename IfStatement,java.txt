@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class IfStatement {
+
+	public static void main(String [] args) {
+	Scanner scanner = new Scanner(System.in);
+
+	System.out.print("Enter score: "),
+	int score = scanner.nextInt();
+
+	if (50 >=69) {
+	System.out.println("C");
+	}
+
+	}
+}
