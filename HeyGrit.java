@@ -2,7 +2,18 @@ import java.util.Scanner;
 public class HeyGrit {
 
 	public static void main(String [] args){
-	Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);	
+	
+	int number = 0;
+	int count = 1;
+
+	while(count <= 2){
+	System.out.print("Press 1 to continue or press -1 to quit: ");
+	number = scanner.nextInt();
+	if(number == -1) {
+	break;
+	}
+
 
 	String multiLineString = """
 	Welcome to online banking!!!
@@ -11,17 +22,18 @@ public class HeyGrit {
 	3.To buy data.
 	4.To share data.
 	5.To go back.
-	6.Invalid input.
+
                 """;
 
 	System.out.print(multiLineString);
-
+	
+	
 	System.out.print("Enter a digit to get started: ");
 	int digit = scanner.nextInt();
 	
-	switch (balance){
+	switch (number){
 	case 1:
-	switch (digit) {
+	switch (number) {
 	case 1:
 	System.out.print("To make transfer");
 		break;
@@ -40,11 +52,14 @@ public class HeyGrit {
 	default:
 	System.out.print("invalid input");
 	}
-	System.our.print("Main menu");
+	System.out.print("");
 		break;
 	default: 
-	System.out.print("invalid");
+	System.out.print("invalid input");
 
 	}
+	count++;
+	}
+
 }
 }

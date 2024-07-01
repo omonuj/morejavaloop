@@ -4,11 +4,10 @@ public class Jonah {
 	public static void main(String [] args){
 	Scanner scanner = new Scanner(System.in);
 	int user = 0;
-
-	while (user = 1; user <= 6) {
+	int count = 1;
+	while (count <= 2) {
 	System.out.print("Enter a number: " );
 	user = scanner.nextInt();
-	user++;
 
 	if (user == 1) {
 	System.out.println("To make transfer");
@@ -25,10 +24,11 @@ public class Jonah {
 	else if (user == 5) {
 	System.out.println("To pay bills");
 	}
-	else if (user == 6) {
-	System.out.println("To terminate");
+	else {
+	System.out.println("invalid");
 
 	}
+	count++;
 	}
 }
 	
